@@ -7,8 +7,8 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"github.com/influxdata/influxdb-comparisons/bulk_load"
-	"github.com/influxdata/influxdb-comparisons/util/report"
+	"github.com/tanmesh/influxdb-comparisons/bulk_load"
+	"github.com/tanmesh/influxdb-comparisons/util/report"
 	"io"
 	"io/ioutil"
 	"log"
@@ -428,10 +428,10 @@ loop:
 	// channel when done:
 	log.Println("Waiting for workers to finish")
 	waitCh := make(chan int)
-	_ := false
+	// waitFinished := false
 	go func() {
 		workersGroup.Wait()
-		_ = true
+		// waitFinished = true
 		waitCh <- 1
 	}()
 	waitTimer := time.NewTimer(time.Minute * 10)

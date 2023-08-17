@@ -7,6 +7,7 @@ require (
 	github.com/gofrs/uuid v4.2.0+incompatible // indirect
 	github.com/golang/protobuf v1.5.2
 	github.com/google/flatbuffers v1.12.0
+	github.com/influxdata/influxdb-comparisons v0.0.0-20221128160602-823e78ffae25 // indirect
 	github.com/jackc/pgx/v4 v4.17.2
 	github.com/kisielk/og-rek v1.2.0
 	github.com/klauspost/compress v1.15.0
