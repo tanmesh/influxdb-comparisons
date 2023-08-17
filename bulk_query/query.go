@@ -431,7 +431,7 @@ loop:
 	_ := false
 	go func() {
 		workersGroup.Wait()
-		waitFinished = true
+		_ = true
 		waitCh <- 1
 	}()
 	waitTimer := time.NewTimer(time.Minute * 10)
