@@ -428,7 +428,7 @@ loop:
 	// channel when done:
 	log.Println("Waiting for workers to finish")
 	waitCh := make(chan int)
-	waitFinished := false
+	_ := false
 	go func() {
 		workersGroup.Wait()
 		waitFinished = true
